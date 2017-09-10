@@ -1,0 +1,9 @@
+.add-contact-fields {
+  display: flex;
+  width: 100%;
+  background: red;
+}
+
+input {
+  padding: 2em;
+}

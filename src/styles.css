@@ -1,0 +1,40 @@
+/* General Styling */
+main, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* address book banner */
+.address-book-banner-cont {
+  background: lightgrey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.address-book-banner-content {
+
+}
+
+/* button styling */
+.address-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.Btn-save {
+  background: #2b67bf;
+  padding: 4%;
+  width: 15em;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.25em;
+  border-radius: 10px;
+  border:1px solid #2b67bf;
+}
+
+.contact-list {
+  padding: 5%;
+}
