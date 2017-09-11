@@ -13,6 +13,7 @@ import {ObjectToArrayService} from './services/object-to-array.service';
 import { RouteCreateContactComponent } from './routes/route-create-contact/route-create-contact.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import {ToastrModule} from 'ngx-toastr';
         BrowserModule,
         RoutingRollerModule,
         BrowserAnimationsModule,
-        ToastrModule.forRoot()
+        ToastrModule.forRoot(),
+        ReactiveFormsModule
     ],
     providers: [
         FirebaseService,
