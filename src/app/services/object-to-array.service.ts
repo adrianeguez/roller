@@ -7,10 +7,14 @@ export class ObjectToArrayService {
     }
 
     exec(object) {
-        return Object.keys(object).map((key) => {
-            object[key].id = key;
-            return object[key];
-        });
+        if (object) {
+            return Object.keys(object).map((key) => {
+                object[key].id = key;
+                return object[key];
+            });
+        } else {
+            return [];
+        }
     }
 
 }

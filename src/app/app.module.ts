@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {ContactListComponent} from './components/contacts/contact-list/contact-list.component';
-import {AddContactComponent} from './components/contacts/add-contact/add-contact.component';
 import {FirebaseService} from './services/firebase.service';
 import { NotFoundComponent } from './components/404/not-found/not-found.component';
 import {RoutingRollerModule} from './app.routes';
@@ -14,6 +13,7 @@ import { RouteCreateContactComponent } from './routes/route-create-contact/route
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
 import {FormsModule} from '@angular/forms';
+import {AddContactComponent} from './components/contacts/add-contact/add-contact.component';
 
 @NgModule({
     declarations: [

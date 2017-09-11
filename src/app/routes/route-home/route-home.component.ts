@@ -24,10 +24,13 @@ export class RouteHomeComponent implements OnInit {
                 data => {
                     const contactsObject = data.val();
                     this.contacts = this._objectToArrayService.exec(contactsObject);
-                    this._toastr.info(`${this.contacts.length + 1} contacts retrieved.`, `Success.`);
+                    if (this.contacts.length > 0) {
+                        this._toastr.info(`${this.contacts.length} contacts retrieved.`, `Success.`);
+                    }
                 }
             )
     }
+
     goCreateContactRoute() {
         this._router.navigate(['createContact']);
     }

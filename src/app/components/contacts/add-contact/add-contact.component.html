@@ -54,9 +54,9 @@
                    #address="ngModel">
         </div>
     </fieldset>
-    <button class="btn btn-block" [class.btn-success]="ContactForm.valid && !contact.loading"
+    <button class="btn btn-block btn-secondary" [class.btn-success]="ContactForm.valid"
             [class.btn-secondary]="!ContactForm.valid || contact.loading"
             [disabled]="!ContactForm.valid || contact.loading" type="submit">
-        {{ contact.loading? 'Loading . . . ' : 'Create Contact' }}
+        {{ contact.loading? 'Creating ... ' : 'Create Contact' }}
     </button>
 </form>
