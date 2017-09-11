@@ -3,12 +3,12 @@
 <div class="row padding-info-content">
     <div class="col-sm-9"></div>
     <div class="col-sm-3">
-        <button class="btn btn-block btn-primary">Create Contact</button>
+        <button class="btn btn-block btn-primary" (click)="goCreateContactRoute()">Create Contact</button>
     </div>
 </div>
 
 <div *ngIf="contacts.length > 0">
-    <div *ngFor="let contact of contacts">
+    <div class="animated fadeInUp" *ngFor="let contact of contacts">
         <app-contact-list [contact]="contact"></app-contact-list>
     </div>
 </div>

@@ -11,6 +11,8 @@ import { RouteHomeComponent } from './routes/route-home/route-home.component';
 import {ContactService} from './services/contact.service';
 import {ObjectToArrayService} from './services/object-to-array.service';
 import { RouteCreateContactComponent } from './routes/route-create-contact/route-create-contact.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,9 @@ import { RouteCreateContactComponent } from './routes/route-create-contact/route
     ],
     imports: [
         BrowserModule,
-        RoutingRollerModule
+        RoutingRollerModule,
+        BrowserAnimationsModule,
+        ToastrModule.forRoot()
     ],
     providers: [
         FirebaseService,

@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ContactService} from '../../services/contact.service';
 import {ObjectToArrayService} from '../../services/object-to-array.service';
+import {Router} from '@angular/router';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
     selector: 'app-route-home',
@@ -11,7 +13,9 @@ export class RouteHomeComponent implements OnInit {
     contacts: any = [];
 
     constructor(private _contactService: ContactService,
-                private _objectToArrayService: ObjectToArrayService) {
+                private _objectToArrayService: ObjectToArrayService,
+                private _router: Router,
+                private _toastr: ToastrService) {
     }
 
     ngOnInit() {
@@ -20,8 +24,12 @@ export class RouteHomeComponent implements OnInit {
                 data => {
                     const contactsObject = data.val();
                     this.contacts = this._objectToArrayService.exec(contactsObject);
+                    this._toastr.info(`${this.contacts.length + 1} contacts retrieved.`, `Success.`);
                 }
             )
+    }
+    goCreateContactRoute() {
+        this._router.navigate(['createContact']);
     }
 
 }
