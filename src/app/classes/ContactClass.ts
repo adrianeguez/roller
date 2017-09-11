@@ -7,8 +7,6 @@ export class ContactClass {
     phoneNumberValidationMessages?: ContactValidationMessagesInterfaz;
     loading = false;
     valid = false;
-    contactFormGroup: FormGroup;
-    formMessages: string[];
 
     constructor(public name?: string,
                 public email?: string,
