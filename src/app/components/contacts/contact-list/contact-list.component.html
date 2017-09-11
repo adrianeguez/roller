@@ -1,16 +1,10 @@
-<div class="address-book-banner-cont">
-  <div class="address-book-banner-content">
-    <h1>Contact List</h1>
-  </div>
+<div class="list-group">
+    <div href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{contact.name}}</h5>
+            <small>Edit Contact</small>
+        </div>
+        <p class="mb-1"> <i class="fa fa-address-card-o" aria-hidden="true"></i> Address : {{contact.address}}</p>
+        <small> <i class="fa fa-envelope" aria-hidden="true"></i> : {{contact.email}} - <i class="fa fa-mobile" aria-hidden="true"></i> : {{contact.phone_number}}</small>
+    </div>
 </div>
-
-<!--The content below is only a placeholder and can be replaced.-->
-
-<div class="contact-list">
-  <div>John Doyle</div>
-  <div>john@gmail.com</div>
-  <div>076999928882</div>
-  <div>No 1, Nottingham, Nottinghamshire, UK</div>
-</div>
-
-<div class="address-button"><a href="#"><button class="Btn-save">Add New Contact</button></a></div>

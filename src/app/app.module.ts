@@ -7,20 +7,28 @@ import {AddContactComponent} from './components/contacts/add-contact/add-contact
 import {FirebaseService} from './services/firebase.service';
 import { NotFoundComponent } from './components/404/not-found/not-found.component';
 import {RoutingRollerModule} from './app.routes';
+import { RouteHomeComponent } from './routes/route-home/route-home.component';
+import {ContactService} from './services/contact.service';
+import {ObjectToArrayService} from './services/object-to-array.service';
+import { RouteCreateContactComponent } from './routes/route-create-contact/route-create-contact.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ContactListComponent,
         AddContactComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        RouteHomeComponent,
+        RouteCreateContactComponent
     ],
     imports: [
         BrowserModule,
         RoutingRollerModule
     ],
     providers: [
-        FirebaseService
+        FirebaseService,
+        ContactService,
+        ObjectToArrayService
     ],
     bootstrap: [AppComponent]
 })

@@ -18,7 +18,7 @@ export class FirebaseService {
             storageBucket: 'address-book-a27b4.appspot.com',
             messagingSenderId: '525963784917'
         };
-        this.firebaseApp = firebase.initializeApp(this.firebaseConfig);
-        this.firebaseDefaultDB = this.firebaseApp.database();
+        // this.firebaseApp = firebase.initializeApp(this.firebaseConfig);
+        // this.firebaseDefaultDB = this.firebaseApp.database();
     }
 }

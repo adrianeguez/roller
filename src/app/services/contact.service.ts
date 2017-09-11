@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {FirebaseService} from './firebase.service';
+import {fire} from '../../environments/environment';
 
 @Injectable()
 export class ContactService {
@@ -9,11 +10,11 @@ export class ContactService {
     }
 
     getAll() {
-        return this._firebaseService.firebaseDefaultDB.ref(this.model).once('value');
+        return fire.db.ref(this.model).once('value');
     }
 
     getOne(id: string) {
-        return this._firebaseService.firebaseDefaultDB.ref(this.model + `/${id}`).once('value');
+        return fire.db.ref(this.model + `/${id}`).once('value');
     }
 
 
